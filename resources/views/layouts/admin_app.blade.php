@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <title>
+        @stack('title')
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <link href="{{asset('admin_assets/css/style.css')}}" rel="stylesheet">
 {{--    <link href="{{asset('css/app.css')}}" rel="stylesheet">--}}
@@ -69,12 +74,12 @@
 <!--**********************************
     Scripts
 ***********************************-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="{{asset('admin_assets/plugins/common/common.min.js')}}"></script>
 <script src="{{asset('admin_assets/js/custom.min.js')}}"></script>
 <script src="{{asset('admin_assets/js/settings.js')}}"></script>
 <script src="{{asset('admin_assets/js/gleek.js')}}"></script>
 <script src="{{asset('admin_assets/js/styleSwitcher.js')}}"></script>
-
 <!-- Chartjs -->
 <script src="{{asset('admin_assets/plugins/chart.js/Chart.bundle.min.js')}}"></script>
 <!-- Circle progress -->
@@ -92,9 +97,6 @@
 <!-- ChartistJS -->
 <script src="{{asset('admin_assets/plugins/chartist/js/chartist.min.js')}}"></script>
 <script src="{{asset('admin_assets/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js')}}"></script>
-
-
-
 <script src="{{asset('admin_assets/js/dashboard/dashboard-1.js')}}"></script>
 </body>
 </html>

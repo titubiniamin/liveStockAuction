@@ -1,5 +1,8 @@
 @extends('layouts.admin_app')
 @section('main-content')
+    @push('title')
+        Dashboard
+    @endpush
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">

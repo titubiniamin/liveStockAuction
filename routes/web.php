@@ -22,10 +22,12 @@ use Illuminate\Support\Facades\Auth;
 // });
 
 Auth::routes();
+////////////////////Website///////////////
 Route::get('/',[WebsiteController::class,'index']);
 Route::get('auction-details',[WebsiteController::class,'auctionDetails'])->name('auction.details');
-
+////////////////////User///////////////
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+////////////////////Admin///////////////
 Route::group(['prefix' => 'admin'], function () {
    Route::group(['middleware' => 'admin.guest'], function () {
        Route::view('/login', 'admin.login')->name('admin.login');
@@ -34,5 +36,7 @@ Route::group(['prefix' => 'admin'], function () {
    Route::group(['middleware'=>'admin.auth'],function(){
       Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
       Route::get('/logout',[AdminController::class,'logout'])->name('admin.logout');
+      Route::view('/auction','admin.auction')->name('auction.entry');
+      Route::post('/auction/store',[AdminController::class,'auctionStore'])->name('auction.store');
    });
 });

@@ -6,6 +6,11 @@
         <ul class="metismenu" id="menu">
             <li class="nav-label">Dashboard</li>
             <li>
+                <a href="{{route('auction.entry')}}" aria-expanded="false">
+                    <i class="icon-badge menu-icon"></i><span class="nav-text">Entry</span>
+                </a>
+            </li>
+            <li>
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                     <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                 </a>
